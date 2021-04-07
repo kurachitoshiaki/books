@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class IndexController {
     @Autowired
-    EmployeeRepository empRepository;
+    BooksRepository bookRepository;
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index(Model model) {
-        List<Employee> emplist=empRepository.findAll();
-        model.addAttribute("emplist", emplist);
+        List<Books> booklist=bookRepository.findAll();
+        model.addAttribute("booklist", booklist);
         return "index";
     }
 }

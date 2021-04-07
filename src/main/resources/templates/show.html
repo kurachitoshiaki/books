@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>ユーザー情報詳細</title>
+    <link href="/css/add.css" rel="stylesheet"></link>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+  <h1>ユーザー情報詳細</h1>
+  <table th:object="${book}">
+    <tr>
+      <th class="cell_title">名前</th>
+      <th class="cell_required"></th>
+      <td th:text="*{name}"></td>
+    </tr>
+    <tr>
+  </table>
+  </body>
+</html>
